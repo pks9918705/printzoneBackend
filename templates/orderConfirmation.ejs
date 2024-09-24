@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+      background-color: #007bff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px 8px 0 0;
+    }
+    .content {
+      padding: 20px;
+    }
+    .order-details {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border-radius: 0 0 8px 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Thank you for your order!</h1>
+    </div>
+    <div class="content">
+      <p>Hi there,</p>
+      <p>We’ve received your order. Below are your order details:</p>
+
+      <div class="order-details">
+        <p><strong>Order ID:</strong> <%= orderDetails._id %></p>
+        <p><strong>Order Date:</strong> <%= orderDetails.createdAt %></p>
+        <p><strong>Total Amount:</strong> $<%= orderDetails.totalAmount %></p>
+      </div>
+
+      <p>If you have any questions about your order, feel free to contact us.</p>
+    </div>
+
+    <div class="footer">
+      <p>Thank you for shopping with us!</p>
+      <p>Contact us at support@example.com</p>
+    </div>
+  </div>
+</body>
+</html>
